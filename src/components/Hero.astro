@@ -4,13 +4,16 @@ import Badge from "@/components/Badge.astro"
 import LinkedInIcon from "@/components/icons/LinkedIn.astro"
 import MailIcon from "@/components/icons/Mail.astro"
 import SocialPill from "@/components/SocialPill.astro"
+import { getImage } from "astro:assets";
+
+const imageUrl = new URL("/jose-garcete.webp", import.meta.url).href;
 ---
 
 <div class="max-w-xl">
   <div class="flex gap-4 mb-4">
     <img
       class="rounded-full shadow-lg size-16"
-      src="/jose-garcete.webp"
+      src={imageUrl}
       alt={personalImageAlt}
     />
     <a
