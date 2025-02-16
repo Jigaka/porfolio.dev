@@ -1,24 +1,22 @@
 ---
 import ThemeToggle from "./ThemeToggle.astro"
 
-const basePath = import.meta.env.BASE_URL;
-const getPublicPath = (path: string) => `${basePath}${path}`
 
 const navItems = [
   {
     title: "Experiencia",
     label: "experiencia",
-    url: getPublicPath("/#experiencia"),
+    url: "/#experiencia",
   },
   {
     title: "Proyectos",
     label: "proyectos",
-    url: getPublicPath("/#proyectos"),
+    url: "/#proyectos",
   },
   {
     title: "Sobre mí",
     label: "sobre-mi",
-    url: getPublicPath("/#sobre-mi"),
+    url: "/#sobre-mi",
   },
   {
     title: "Contacto",
