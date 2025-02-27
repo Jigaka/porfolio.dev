@@ -16,6 +16,15 @@ const { description, title } = Astro.props
 <!doctype html>
 <html lang="es">
   <head>
+      <!-- Google tag (gtag.js) -->
+    <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-VSNJRVWLP0"></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-VSNJRVWLP0');
+    </script>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
@@ -24,15 +33,7 @@ const { description, title } = Astro.props
     <title>{title}</title>
     <ViewTransitions />
   </head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VSNJRVWLP0"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
-    gtag('config', 'G-VSNJRVWLP0');
-  </script>
 
   <body class="relative text-black dark:text-white">
     <div
