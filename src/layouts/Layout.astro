@@ -13,6 +13,7 @@ interface Props {
 const { description, title } = Astro.props
 ---
 
+
 <!doctype html>
 <html lang="es">
   <head>
@@ -32,6 +33,17 @@ const { description, title } = Astro.props
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <ViewTransitions />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Jose Garcete" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:image" content="/me-jose.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="/me-jose.webp" />
   </head>
 
 
