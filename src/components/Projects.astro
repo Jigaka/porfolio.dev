@@ -2,21 +2,33 @@
 import GitHub from "./icons/GitHub.astro"
 import NextJS from "./icons/NextJS.astro"
 import Tailwind from "./icons/Tailwind.astro"
+import Supabase from "./icons/Supabase.astro"
+import ReactNative from "./icons/ReactNative.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 
-// const TAGS = {
-//   NEXT: {
-//     name: "Next.js",
-//     class: "bg-black text-white",
-//     icon: NextJS,
-//   },
-//   TAILWIND: {
-//     name: "Tailwind CSS",
-//     class: "bg-[#003159] text-white",
-//     icon: Tailwind,
-//   },
-// }
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextJS,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+  SUPABASE: {
+    name: "Supabase",
+    class: "bg-[#333366] text-white",
+    icon: Supabase,
+  },
+  REACT_NATIVE: {
+    name: "React Native",
+    class: "bg-[#61dafb] text-black",
+    icon: ReactNative,
+  },
+}
 
 /**
  * project structure
@@ -30,7 +42,14 @@ import LinkButton from "./LinkButton.astro"
  * }
  */
 const PROJECTS : any[] = [
-  
+{
+   title: "autentiKa",
+   description: "Aplicación de agendamiento de citas de una peluquería.",
+   link: "",
+   github: "",
+   image: "/projects/autentika.webp",
+   tags: [TAGS.SUPABASE, TAGS.REACT_NATIVE]
+}
 ]
 ---
 
