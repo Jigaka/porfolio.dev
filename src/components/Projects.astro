@@ -48,7 +48,12 @@ const PROJECTS : any[] = [
    link: "",
    github: "",
    image: "/projects/autentika.webp",
-   tags: [TAGS.SUPABASE, TAGS.REACT_NATIVE]
+   tags: [TAGS.SUPABASE, TAGS.REACT_NATIVE],
+   tasks: [
+     "Desarrollé una aplicación móvil de reservas para una peluquería, permitiendo a los clientes visualizar horarios disponibles y agendar citas en tiempo real",
+     "Construí el frontend utilizando Expo (React Native) e integré Supabase para autenticación y almacenamiento de datos",
+     "Diseñé un sistema de disponibilidad basado en calendario para el personal, optimizando la gestión de turnos y reduciendo conflictos de agenda"
+   ]
 },
 {
    title: "Mituto",
@@ -56,7 +61,12 @@ const PROJECTS : any[] = [
    link: "https://mituto.vercel.app",
    github: "",
    image: "/projects/mituto.webp",
-   tags: [TAGS.NEXT, TAGS.TAILWIND,TAGS.SUPABASE]
+   tags: [TAGS.NEXT, TAGS.TAILWIND,TAGS.SUPABASE],
+   tasks: [
+     "Desarrollé una plataforma web que conecta a estudiantes con tutores especializados para ayudar en tesis, proyectos académicos y trabajos prácticos",
+     "Construí el frontend con Next.js e implementé autenticación y almacenamiento de datos usando Supabase",
+     "Diseñé una interfaz limpia y fácil de usar para facilitar la búsqueda de tutores y la programación de sesiones, mejorando la experiencia del usuario"
+   ]
 }
 ]
 ---
@@ -68,11 +78,11 @@ const PROJECTS : any[] = [
     </p>
   )}
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    PROJECTS.map(({ image, title, description, tags, link, github, tasks }) => (
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+      <img alt="imagen de proyecto" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
     </div>
   </div>
 
@@ -95,6 +105,10 @@ const PROJECTS : any[] = [
         </ul>
 
       <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
+      <ul class="mt-4 list-disc pl-6 text-gray-700 dark:text-gray-400">
+        {tasks.map((task) => (
+          <li>{task}</li>
+        ))}
       <footer class="flex items-end justify-start mt-4 gap-x-4">
           {github && (
             <LinkButton href={github}>
